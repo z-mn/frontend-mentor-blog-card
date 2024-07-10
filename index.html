@@ -26,7 +26,6 @@
     body {
       min-height: 100vh;
       margin: 0;
-      padding: 1rem;
       font-family: var(--fontFamily);
       font-weight: var(--regularFontWeight);
       font-size: 1rem;
@@ -34,15 +33,16 @@
       place-items: center;
       background: var(--primaryColour);
       color: var(--headerTextColour);
+      padding-inline: 1rem;
     }
 
     .card {
-      border-radius: 10px;
+      border-radius: 20px;
       border: 2px solid var(--headerTextColour);
       background: white;
       box-shadow: 5px 5px black;
-      min-width: 340px;
-      padding: 1rem;
+      max-width: 340px;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -50,13 +50,17 @@
     }
 
     .illustration-image {
-      max-height: 140px;
+      max-width: 340px;
+      aspect-ratio: 1;
+      margin: auto;
+      border-radius: 10px;
     }
 
     .information {
       min-width: calc(340px - 2rem);
       display: flex;
       flex-direction: column;
+      gap: 0.75rem;
     }
 
     .fw {
@@ -66,33 +70,36 @@
     .keyword {
       padding: 0.25rem 0.5rem;
       background: var(--primaryColour);
+      border-radius: 5px;
+      width: 4.5em;
     }
 
     .title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: var(--headerTextColour);
+      text-decoration: none;
     }
     .title:hover {
       color: var(--primaryColour);
     }
+    h2 {
+      margin-block: 0.5rem;
+    }
     
     .description {
       color: gray;
+      margin-block: 0 0.5rem;
     }
 
     .author {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
     }
 
     .photo {
       aspect-ratio: 1;
       max-width: 30px;
-    }
-
-    .name {
-      font-size: 1.25rem;
     }
   </style>
 </head>
@@ -102,7 +109,7 @@
     <article class="information">
       <span class="keyword fw">Learning</span>
       <span class="date">Published 21 Dec 2023</span>
-      <h2 class="fw"><a href="" class="title"></a>HTML & CSS foundations</h2>
+      <h2 class="fw"><a href="" class="title">HTML & CSS foundations</a></h2>
       <p class="description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
       <div class="author">
         <img src="assets/images/image-avatar.webp" alt="image-avatar" class="photo">
